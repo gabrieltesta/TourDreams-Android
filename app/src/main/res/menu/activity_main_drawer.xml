@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" android:id="@+id/nav_grupo_menu">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home"/>
+        <item
+            android:id="@+id/nav_sobrenos"
+            android:icon="@drawable/ic_accessibility_black_24dp"
+            android:title="Sobre nós"/>
+        <item
+            android:id="@+id/nav_nossosparceiros"
+            android:icon="@drawable/ic_group_black_24dp"
+            android:title="Nossos Parceiros"/>
+        <item
+            android:id="@+id/nav_melhoresdestinos"
+            android:icon="@drawable/ic_place_black_24dp"
+            android:title="Melhores Destinos"/>
+        <item
+            android:id="@+id/nav_conhecaseudestino"
+            android:icon="@drawable/ic_rate_review_black_24dp"
+            android:title="Conheça seu destino"/>
+        <item
+            android:id="@+id/nav_promocoes"
+            android:icon="@drawable/ic_local_offer_black_24dp"
+            android:title="Promoções"/>
+        <item
+            android:id="@+id/nav_faleconosco"
+            android:icon="@drawable/ic_chat_black_24dp"
+            android:title="Fale Conosco"/>
+    </group>
+    <group android:checkableBehavior="single" android:id="@+id/nav_grupo_login">
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Login"/>
+        <item
+            android:id="@+id/nav_registrar"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Criar Conta"/>
+    </group>
+
+</menu>

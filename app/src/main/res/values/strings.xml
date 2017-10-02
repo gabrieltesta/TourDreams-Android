@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TourDreams</string>
+    <string name="title_activity_main">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Sobre Nós</string>
+    <string name="title_activity_sobre_nos">Sobre Nós</string>
+    <string name="title_activity_melhores_destinos">MelhoresDestinos</string>
+</resources>
