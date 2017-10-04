@@ -1,12 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="app.tourdreams.com.br.MelhoresDestinos"
-    tools:showIn="@layout/activity_melhores_destinos"
-    android:orientation="vertical">
+    tools:context="app.tourdreams.com.br.SobreNos"
+    tools:showIn="@layout/activity_melhores_destinos">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/text_ultimasreservas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baseado nas últimas reservas"
+            android:textSize="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="35dp"
+            >
+        </TextView>
+        <View
+            android:id="@+id/tracinho1"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#b4abab"
+            android:layout_marginTop="18dp"
+
+            android:layout_gravity="center">
+
+        </View>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="261dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/hotel2"
+
+        />
+        
+        <TextView
+            android:id="@+id/conteudo_hotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hotel Gramadinho\nGramado - SP\nRua dos esquecidos, 98\n\n                                        R$500,00"
+            android:textColor="#181717"
+            android:textSize="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15px"
+            android:layout_weight="0.80"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_baseadoperfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baseado no seu perfil"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="35dp"
+                >
+            </TextView>
+            <View
+                android:id="@+id/tracinho2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#b4abab"
+                android:layout_marginTop="18dp"
+
+                android:layout_gravity="center">
+
+            </View>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="261dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/hotel1"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hotel Concha\nMaceió - SP\nRua dos loucos, 666\n\n                                        R$600,00"
+            android:textColor="#181717"
+            android:textSize="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15px"
+            android:layout_weight="0.80" />
+    </LinearLayout>
+
+</ScrollView>

@@ -9,7 +9,8 @@
         <item
             android:id="@+id/nav_sobrenos"
             android:icon="@drawable/ic_accessibility_black_24dp"
-            android:title="Sobre nós"/>
+            android:title="Sobre nós"
+           />
         <item
             android:id="@+id/nav_nossosparceiros"
             android:icon="@drawable/ic_group_black_24dp"
@@ -34,11 +35,11 @@
     <group android:checkableBehavior="single" android:id="@+id/nav_grupo_login">
         <item
             android:id="@+id/nav_login"
-            android:icon="@drawable/ic_person_black_24dp"
+            android:icon="@drawable/ic_menu_manage"
             android:title="Login"/>
         <item
             android:id="@+id/nav_registrar"
-            android:icon="@drawable/ic_person_add_black_24dp"
+            android:icon="@drawable/ic_menu_manage"
             android:title="Criar Conta"/>
     </group>
 

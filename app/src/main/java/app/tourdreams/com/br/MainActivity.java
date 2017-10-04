@@ -1,6 +1,7 @@
 package app.tourdreams.com.br;
 
 import android.content.Intent;
+import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -8,6 +9,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
@@ -48,6 +50,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
         // Handle action bar item clicks here. The action bar will
@@ -61,6 +71,7 @@ public class MainActivity extends AppCompatActivity
             return true;
         }
 
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -72,8 +83,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home)
-        {
 
+        {
         }
         if (id == R.id.nav_sobrenos)
         {
@@ -83,6 +94,23 @@ public class MainActivity extends AppCompatActivity
         {
             startActivity(new Intent(this, MelhoresDestinos.class));
         }
+        if (id == R.id.nav_nossosparceiros)
+
+        {
+        }
+        if (id == R.id.nav_conhecaseudestino)
+
+        {
+        }
+        if (id == R.id.nav_promocoes)
+
+        {
+        }
+        if (id == R.id.nav_faleconosco)
+
+        {
+        }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
