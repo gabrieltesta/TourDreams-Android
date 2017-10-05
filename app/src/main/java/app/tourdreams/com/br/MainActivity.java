@@ -1,7 +1,6 @@
 package app.tourdreams.com.br;
 
 import android.content.Intent;
-import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -80,35 +79,20 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item)
     {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_home)
-
+        switch(item.getItemId())
         {
-        }
-        if (id == R.id.nav_sobrenos)
-        {
-            startActivity(new Intent(this, SobreNos.class));
-        }
-        if (id == R.id.nav_melhoresdestinos)
-        {
-            startActivity(new Intent(this, MelhoresDestinos.class));
-        }
-        if (id == R.id.nav_nossosparceiros)
-
-        {
-        }
-        if (id == R.id.nav_conhecaseudestino)
-
-        {
-        }
-        if (id == R.id.nav_promocoes)
-
-        {
-        }
-        if (id == R.id.nav_faleconosco)
-
-        {
+            case R.id.nav_home:
+                startActivity(new Intent(this, MainActivity.class));
+                break;
+            case R.id.nav_sobrenos:
+                startActivity(new Intent(this, SobreNos.class));
+                break;
+            case R.id.nav_melhoresdestinos:
+                startActivity(new Intent(this, MelhoresDestinos.class));
+                break;
+            case R.id.nav_nossosparceiros:
+                startActivity(new Intent(this, NossosParceiros.class));
+                break;
         }
 
 
