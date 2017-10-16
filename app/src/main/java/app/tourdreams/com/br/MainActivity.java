@@ -96,6 +96,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_conhecaseudestino:
                 startActivity(new Intent(this, ConhecaseuDestino.class));
                 break;
+            case R.id.nav_faleconosco:
+                startActivity(new Intent(this, Faleconosco.class));
+                break;
         }
 
 
