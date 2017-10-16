@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.tourdreams.com.br.NossosParceirosActivity">
+    tools:context="app.tourdreams.com.br.LoginActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,6 +21,8 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_nossos_parceiros"/>
+    <include layout="@layout/content_login"/>
+
+
 
 </android.support.design.widget.CoordinatorLayout>

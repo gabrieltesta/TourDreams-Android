@@ -85,19 +85,22 @@ public class MainActivity extends AppCompatActivity
                 startActivity(new Intent(this, MainActivity.class));
                 break;
             case R.id.nav_sobrenos:
-                startActivity(new Intent(this, SobreNos.class));
+                startActivity(new Intent(this, SobreNosActivity.class));
                 break;
             case R.id.nav_melhoresdestinos:
-                startActivity(new Intent(this, MelhoresDestinos.class));
+                startActivity(new Intent(this, MelhoresDestinosActivity.class));
                 break;
             case R.id.nav_nossosparceiros:
-                startActivity(new Intent(this, NossosParceiros.class));
+                startActivity(new Intent(this, NossosParceirosActivity.class));
                 break;
             case R.id.nav_conhecaseudestino:
-                startActivity(new Intent(this, ConhecaseuDestino.class));
+                startActivity(new Intent(this, ConhecaseuDestinoActivity.class));
+                break;
+            case R.id.nav_login:
+                startActivity(new Intent(this, LoginActivity.class));
                 break;
             case R.id.nav_faleconosco:
-                startActivity(new Intent(this, Faleconosco.class));
+                startActivity(new Intent(this, FaleconoscoActivity.class));
                 break;
         }
 
