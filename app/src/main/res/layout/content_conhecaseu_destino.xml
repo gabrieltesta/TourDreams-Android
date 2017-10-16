@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="app.tourdreams.com.br.ConhecaseuDestino"
+    tools:showIn="@layout/activity_conhecaseu_destino"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecione uma região"
+        android:textSize="25sp"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+      />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listadestinos"
+        android:layout_marginTop="6dp"/>
+
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mais pesquisados"
+            android:textSize="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="95dp"
+            >
+        </TextView>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#b4abab"
+            android:layout_marginTop="48dp"
+            android:layout_gravity="center">
+
+        </View>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="800px"
+        android:layout_height="350px"
+        android:layout_gravity="center"
+        android:src="@drawable/viagem"
+        android:layout_marginTop="50dp"
+        />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Nordeste" />
+
+        <ImageView
+        android:layout_width="800px"
+        android:layout_height="350px"
+        android:layout_gravity="center"
+        android:src="@drawable/viagem0"
+        android:layout_marginTop="50dp"/>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Sul" />
+
+    </LinearLayout>
+
+</ScrollView>
