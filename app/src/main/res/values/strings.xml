@@ -14,4 +14,5 @@
     <string name="title_activity_faleconosco">Fale Conosco</string>
     <string name="title_activity_menu_registro">Criar Conta</string>
     <string name="title_activity_registro_usuario">Registro de Usuário</string>
+    <string name="title_activity_busca">Busca de Acomodações</string>
 </resources>
