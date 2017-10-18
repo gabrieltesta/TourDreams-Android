@@ -102,6 +102,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_faleconosco:
                 startActivity(new Intent(this, FaleconoscoActivity.class));
                 break;
+            case R.id.nav_registrar:
+                startActivity(new Intent(this, RegistroUsuarioActivity.class));
         }
 
 

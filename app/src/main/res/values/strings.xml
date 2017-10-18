@@ -7,9 +7,11 @@
 
     <string name="action_settings">Sobre Nós</string>
     <string name="title_activity_sobre_nos">Sobre Nós</string>
-    <string name="title_activity_melhores_destinos">MelhoresDestinos</string>
-    <string name="title_activity_nossos_parceiros">NossosParceiros</string>
+    <string name="title_activity_melhores_destinos">Melhores Destinos</string>
+    <string name="title_activity_nossos_parceiros">Nossos Parceiros</string>
     <string name="title_activity_conhecaseu_destino">Conheça seu destino</string>
     <string name="title_activity_login">Login</string>
-    <string name="title_activity_faleconosco">Faleconosco</string>
+    <string name="title_activity_faleconosco">Fale Conosco</string>
+    <string name="title_activity_menu_registro">Criar Conta</string>
+    <string name="title_activity_registro_usuario">Registro de Usuário</string>
 </resources>

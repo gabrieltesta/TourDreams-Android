@@ -73,6 +73,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
         </activity>
+        <activity
+            android:name=".RegistroUsuarioActivity"
+            android:label="@string/title_activity_registro_usuario"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.tourdreams.com.br.MainActivity"/>
+        </activity>
     </application>
 
 </manifest>
