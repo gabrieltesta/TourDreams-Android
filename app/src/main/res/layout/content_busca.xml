@@ -9,15 +9,16 @@
     tools:context="app.tourdreams.com.br.BuscaActivity"
     tools:showIn="@layout/activity_busca"
     android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Você pesquisou por: São Paulo"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/list_view_busca"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="10dp">
-
     </ListView>
 </LinearLayout>

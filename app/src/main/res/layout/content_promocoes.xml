@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="app.tourdreams.com.br.PromocoesActivity"
+    tools:showIn="@layout/activity_promocoes">
+    <ss.com.bannerslider.views.BannerSlider
+        android:id="@+id/banner_slider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:loopSlides="false"
+        app:interval="5000"
+        app:defaultIndicators="square"
+        app:defaultBanner="1"
+        >
+
+    </ss.com.bannerslider.views.BannerSlider>
+</LinearLayout>

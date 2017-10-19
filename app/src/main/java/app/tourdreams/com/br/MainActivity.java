@@ -12,10 +12,13 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
 {
+    TextView img_norte, img_nordeste, img_centrooeste, img_sudeste, img_sul;
 
     Context context;
     @Override
@@ -36,6 +39,68 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        configurarRegioes();
+    }
+
+    public void configurarRegioes()
+    {
+        img_norte = (TextView) findViewById(R.id.img_norte);
+        img_nordeste = (TextView) findViewById(R.id.img_nordeste);
+        img_centrooeste = (TextView) findViewById(R.id.img_centrooeste);
+        img_sudeste = (TextView) findViewById(R.id.img_sudeste);
+        img_sul = (TextView) findViewById(R.id.img_sul);
+
+        img_norte.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                buscarRegiao("Norte");
+            }
+        });
+
+        img_nordeste.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                buscarRegiao("Nordeste");
+            }
+        });
+
+        img_centrooeste.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                buscarRegiao("Centro-Oeste");
+            }
+        });
+
+        img_sudeste.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                buscarRegiao("Sudeste");
+            }
+        });
+
+        img_sul.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                buscarRegiao("Sul");
+            }
+        });
+    }
+
+    public void buscarRegiao(String regiao)
+    {
+        Intent intent = new Intent(this, BuscaActivity.class);
+        intent.putExtra("regiao", regiao);
+        startActivity(intent);
     }
 
     @Override
@@ -127,6 +192,10 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_registrar:
                 startActivity(new Intent(this, RegistroUsuarioActivity.class));
+                break;
+            case R.id.nav_promocoes:
+                startActivity(new Intent(this, PromocoesActivity.class));
+                break;
         }
 
 

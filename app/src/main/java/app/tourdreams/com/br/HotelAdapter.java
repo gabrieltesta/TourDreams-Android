@@ -23,8 +23,7 @@ public class HotelAdapter extends ArrayAdapter<Hotel>
     Hotel hotel;
     String valorMinimo, qtdAvaliacoes;
     TextView text_view_hotel, text_view_avaliacao, text_view_qtd_avaliacoes, text_view_local, text_view_valor;
-    RatingBar rat_qtd_estrelas;
-    ImageView img_busca_hotel;
+    ImageView img_busca_hotel, img_view_estrela1, img_view_estrela2, img_view_estrela3, img_view_estrela4, img_view_estrela5;
 
     public HotelAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Hotel> objects)
     {
@@ -59,8 +58,36 @@ public class HotelAdapter extends ArrayAdapter<Hotel>
         text_view_valor.setText(valorMinimo);
         text_view_qtd_avaliacoes.setText(qtdAvaliacoes);
         text_view_avaliacao.setText(hotel.getAvaliacao().toString());
-        rat_qtd_estrelas.setNumStars(hotel.getQtdEstrelas());
         Glide.with(view).load("https://taj.tajhotels.com/content/dam/luxury/hotels/Taj_Mahal_Delhi/images/4x3/HotelFacade4x3.jpg").thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_busca_hotel);
+
+        switch (hotel.getQtdEstrelas())
+        {
+            case 1:
+                img_view_estrela1.setImageResource(R.drawable.estrela);
+                break;
+            case 2:
+                img_view_estrela1.setImageResource(R.drawable.estrela);
+                img_view_estrela2.setImageResource(R.drawable.estrela);
+                break;
+            case 3:
+                img_view_estrela1.setImageResource(R.drawable.estrela);
+                img_view_estrela2.setImageResource(R.drawable.estrela);
+                img_view_estrela3.setImageResource(R.drawable.estrela);
+                break;
+            case 4:
+                img_view_estrela1.setImageResource(R.drawable.estrela);
+                img_view_estrela2.setImageResource(R.drawable.estrela);
+                img_view_estrela3.setImageResource(R.drawable.estrela);
+                img_view_estrela4.setImageResource(R.drawable.estrela);
+                break;
+            case 5:
+                img_view_estrela1.setImageResource(R.drawable.estrela);
+                img_view_estrela2.setImageResource(R.drawable.estrela);
+                img_view_estrela3.setImageResource(R.drawable.estrela);
+                img_view_estrela4.setImageResource(R.drawable.estrela);
+                img_view_estrela5.setImageResource(R.drawable.estrela);
+                break;
+        }
     }
 
     // Método formata as horas iniciais e finais em um só campo, e também coloca a moeda no preço.
@@ -78,8 +105,12 @@ public class HotelAdapter extends ArrayAdapter<Hotel>
         text_view_local = (TextView) view.findViewById(R.id.text_view_local);
         text_view_qtd_avaliacoes = (TextView) view.findViewById(R.id.text_view_qtd_avaliacoes);
         text_view_valor = (TextView) view.findViewById(R.id.text_view_valor);
-        rat_qtd_estrelas = (RatingBar) view.findViewById(R.id.rat_qtd_estrelas);
         img_busca_hotel = (ImageView) view.findViewById(R.id.img_busca_hotel);
+        img_view_estrela1 = (ImageView) view.findViewById(R.id.img_view_estrela1);
+        img_view_estrela2 = (ImageView) view.findViewById(R.id.img_view_estrela2);
+        img_view_estrela3 = (ImageView) view.findViewById(R.id.img_view_estrela3);
+        img_view_estrela4 = (ImageView) view.findViewById(R.id.img_view_estrela4);
+        img_view_estrela5 = (ImageView) view.findViewById(R.id.img_view_estrela5);
     }
 
 }

@@ -24,9 +24,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile files('libs/glide-full-4.2.0.jar')
+    compile files('libs/picasso-2.5.2.jar')
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:26.+'
+    compile 'com.ss.bannerslider:bannerslider:1.8.0'
     testCompile 'junit:junit:4.12'
-    compile files('C:/Users/16165843/Documents/android/libs/glide-full-4.2.0.jar')
 }

@@ -1,66 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="app.tourdreams.com.br.FaleconoscoActivity"
-    tools:showIn="@layout/activity_faleconosco"
-
-    >
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:weightSum="1">
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="app.tourdreams.com.br.FaleconoscoActivity"
+            tools:showIn="@layout/activity_faleconosco">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-
-
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Telefone"
-            android:textSize="20dp"
-            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:text="Telefone\n(11)1234-5678"
+            android:textSize="15dp"
             android:textAlignment="center"
-            android:textColor="#666666"
-
-            />
+            android:layout_marginTop="15dp">
+        </TextView>
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="(11)1234-5678"
-            android:textSize="18dp"
-            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:text="Email\ncontato@exemplo.com.br"
+            android:textSize="15dp"
             android:textAlignment="center"
-            android:textColor="#666666"
+            android:layout_marginTop="15dp">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Endereço\nAv.Luiz Carlos Berrini"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp">
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_margin="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ainda com dúvidas? Envie seu feedback ou dúvida."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="Nome"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Email"
+                android:layout_marginTop="5dp"/>
 
-            />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Telefone"
+                android:layout_marginTop="5dp"/>
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Mensagem"
+                android:layout_marginTop="5dp"/>
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:inputType="text|textMultiLine"
+                android:gravity="top"/>
 
-
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:text="Enviar"
+                android:textColor="#ffffff"
+                android:background="#166ec6"
+                android:layout_marginTop="35dp"/>
         </LinearLayout>
 
-
-
-
-
-
-
     </LinearLayout>
-
-
-
-
-
-
 </ScrollView>
