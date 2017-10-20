@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/border"
+            android:src="@drawable/pessoa"
+            android:id="@+id/img_view_cliente"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="6dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="João da Silva disse:"
+                android:id="@+id/text_view_nome"/>
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:id="@+id/text_view_texto"
+                android:text="Lorem ipsum dolor sit amet, mei cu erat dicit deleniti, in lorem efficiendi sea. Id cum copiosae appetere patrioque, ad quis efficiendi qui, ei case erant sed. Ne sed omnes decore, idque integre offendit eu est, te nonumy moderatius mei. Ex mentitum percipitur mei. Vix te vidit ornatus moderatius, has ne case inermis partiendo. Porro interesset duo te, ex per iuvaret nusquam.
+"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

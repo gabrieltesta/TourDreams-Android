@@ -111,6 +111,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
         </activity>
+        <activity
+            android:name=".HotelQuartoActivity"
+            android:label="@string/title_activity_hotel_quarto"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.tourdreams.com.br.BuscaActivity"/>
+        </activity>
     </application>
 
 </manifest>
