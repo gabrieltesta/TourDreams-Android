@@ -120,6 +120,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.BuscaActivity"/>
         </activity>
+        <activity
+            android:name=".QuartoActivity"
+            android:label="@string/title_activity_quarto"
+            android:parentActivityName=".HotelQuartoActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.tourdreams.com.br.HotelQuartoActivity"/>
+        </activity>
+        <activity
+            android:name=".ReservaActivity"
+            android:label="@string/title_activity_reserva"
+            android:parentActivityName=".QuartoActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.tourdreams.com.br.QuartoActivity"/>
+        </activity>
     </application>
 
 </manifest>

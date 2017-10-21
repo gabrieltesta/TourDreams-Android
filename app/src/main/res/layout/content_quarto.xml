@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="app.tourdreams.com.br.QuartoActivity"
+    tools:showIn="@layout/activity_quarto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hotel"
+            android:id="@+id/text_view_hotel"
+            android:textSize="10pt"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quarto Simples"
+            android:textSize="8pt"
+            android:id="@+id/text_view_quarto"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bairro Jardim, São Paulo - SP"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="300dp"
+            android:src="@drawable/quarto"
+            android:id="@+id/img_view_quarto"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_light"
+            android:layout_marginTop="4dp"
+            android:textSize="10pt"
+            android:text="R$ 200,00/dia"
+            android:gravity="center_horizontal"
+            />
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/azulClaro"
+            android:textColor="@android:color/white"
+            android:text="RESERVAR"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAllCaps="true"
+            android:textSize="8pt"
+            android:onClick="abrirReserva"/>
+    </LinearLayout>
+
+</LinearLayout>
