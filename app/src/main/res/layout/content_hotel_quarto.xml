@@ -96,7 +96,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/calendarin"/>
+                       />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/calendarout"/>
+                       />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
