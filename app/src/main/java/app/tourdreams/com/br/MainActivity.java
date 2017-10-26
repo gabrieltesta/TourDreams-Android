@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity
 
     public void configurarRegioes()
     {
+
         img_norte = (TextView) findViewById(R.id.img_norte);
         img_nordeste = (TextView) findViewById(R.id.img_nordeste);
         img_centrooeste = (TextView) findViewById(R.id.img_centrooeste);
