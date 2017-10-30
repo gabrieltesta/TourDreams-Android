@@ -13,12 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="Você pesquisou por: São Paulo"/>
+        />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/list_view_busca"
         android:divider="@android:color/transparent"
-        android:dividerHeight="10dp">
+        android:dividerHeight="10dp"
+        android:id="@+id/list_view_busca">
     </ListView>
+
 </LinearLayout>

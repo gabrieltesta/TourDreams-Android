@@ -1,24 +1,16 @@
 package app.tourdreams.com.br;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.R.string.no;
-import static app.tourdreams.com.br.R.id.btn_salvar;
 
 
 public class RegistroUsuarioActivity extends AppCompatActivity
@@ -46,15 +38,6 @@ public class RegistroUsuarioActivity extends AppCompatActivity
         context = this;
 
         pegarView();
-
-        btn_salvar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                pegarDados();
-                new CadastroTask().execute();
-            }
-        });
-
 
 
 
@@ -98,10 +81,4 @@ public class RegistroUsuarioActivity extends AppCompatActivity
 
     }
 
-
-    private class CadastroTask extends AsyncTask<Void, Void, Void> {
-
-
-
-    }
 
