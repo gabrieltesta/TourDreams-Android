@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... params)
         {
-            String href = "http://10.107.144.15/tourdreams/";
+            String href = "http://10.107.144.24/tourdreams/";
             String link = String.format("%slogin.php?login=%s&senha=%s",
                     href,
                     login,
@@ -78,6 +78,7 @@ public class LoginActivity extends AppCompatActivity {
             super.onPostExecute(aVoid);
             if(retorno.contains("ok"))
             {
+                Sessao.setStatusLogin(true);
                 startActivity(new Intent(context, MainActivity.class));
             }
             else

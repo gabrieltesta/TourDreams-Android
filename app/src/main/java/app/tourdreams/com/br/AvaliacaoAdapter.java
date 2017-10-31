@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,7 +15,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao>
+public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao> implements Filterable
 {
     Context context;
     int resource;
@@ -23,6 +24,7 @@ public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao>
     ImageView img_view_cliente;
     TextView text_view_nome, text_view_texto;
     String mensagem;
+
 
 
     public AvaliacaoAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Avaliacao> objects)
@@ -75,5 +77,7 @@ public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao>
         text_view_texto = (TextView) view.findViewById(R.id.text_view_texto);
         img_view_cliente = (ImageView) view.findViewById(R.id.img_view_cliente);
     }
+
+
 
 }

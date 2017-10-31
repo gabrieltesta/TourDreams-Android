@@ -1,38 +1,42 @@
 <?php
-
-
-		
 	mysql_connect('10.107.144.24', 'root', 'bcd127');
 	mysql_select_db('dbtourdreams');
 	
+	if($_GET['tipo'] == 'cidade')
+	{
+		$sql = "SELECT * FROM vw_buscamobile WHERE cidade LIKE '%".$_GET['cidade']."%'";
+	}
 	
-	$idHotel = $_GET['idHotel'];
-	$hotel = $_GET['hotel'];
-	$checkin = $_GET['checkin'];
-	$checkout=$_GET['checkout'];
-	$descricao=$_GET['descricao'];
+	if($_GET['tipo'] == 'regiao')
+	{
+		$sql = "SELECT * FROM vw_buscamobile WHERE regiao='".$_GET['regiao']."'";
+	}
 	
-	
-	$sql = "select * from tbl_hotel where idHotel ='".$idHotel."';";
 	$select = mysql_query($sql);
 	
+	$array = array();
 	
 	if($rs=mysql_fetch_array($select))
 	{
-		$Hotel = array(
+		$hotel = array(
 			"idHotel"=>$rs['idHotel'],
 			"hotel"=>$rs['hotel'],
 			"checkin"=>$rs['checkin'],
 			"checkout"=>$rs['checkout'],
-			"descricao"=>$rs['descricao']
-		
+			"descricao"=>$rs['descricao'],
+			"caminhoImagem"=>$rs['caminhoImagem'],
+			"qtdEstrelas"=>$rs['qtdEstrelas'],
+			"valorMinimo"=>$rs['valorMinimo'],
+			"bairro"=>$rs['bairro'],
+			"cidade"=>$rs['cidade'],
+			"uf"=>$rs['uf'],
+			"avaliacao"=>$rs['avaliacao'],
+			"qtdAvaliacoes"=>$rs['qtdAvaliacoes'],
+			"tipoEstadia"=>$rs['tipoEstadia'],
+			"regiao"=>$rs['regiao']
 		);
-		
-		
-		$usuarioJSON = json_encode($Hotel);
-		
-		echo($usuarioJSON);
+		$array[] = $hotel;
 	}
 	
-
+	echo json_encode($array);
 ?>

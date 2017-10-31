@@ -41,6 +41,17 @@
             android:id="@+id/nav_registrar"
             android:icon="@drawable/ic_person_add_black_24dp"
             android:title="Criar Conta"/>
+        <item
+            android:id="@+id/nav_perfil_usuario"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Meu perfil"
+            android:visible="false"
+            />
+        <item
+            android:id="@+id/nav_logoff"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="Sair"
+            android:visible="false"/>
     </group>
 
 </menu>

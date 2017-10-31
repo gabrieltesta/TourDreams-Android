@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
 {
     TextView img_norte, img_nordeste, img_centrooeste, img_sudeste, img_sul;
+    boolean loginEfetuado;
+    NavigationView navigationView;
 
     Context context;
     @Override
@@ -37,9 +39,23 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         configurarRegioes();
+
+        if(Sessao.getStatusLogin())
+        {
+            alterarMenuLateral();
+        }
+    }
+
+    private void alterarMenuLateral()
+    {
+        Menu menu = navigationView.getMenu();
+        menu.findItem(R.id.nav_login).setVisible(false);
+        menu.findItem(R.id.nav_registrar).setVisible(false);
+        menu.findItem(R.id.nav_perfil_usuario).setVisible(true);
+        menu.findItem(R.id.nav_logoff).setVisible(true);
     }
 
     public void configurarRegioes()

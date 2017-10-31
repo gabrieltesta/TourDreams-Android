@@ -13,7 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="Você pesquisou por: São Paulo"/>
+        android:text="Você pesquisou por: São Paulo"
+        android:id="@+id/text_view_pesquisa"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_busca_erro"
+        android:padding="16dp"
+        android:textSize="8pt"
+        android:text="Não foi encontrado nenhuma acomodação com estes parâmetros de busca."
+        android:visibility="gone"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

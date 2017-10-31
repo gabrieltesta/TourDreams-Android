@@ -10,8 +10,14 @@ public class Hotel
     private String bairro;
     private String cidade;
     private String uf;
-    private Integer avaliacao;
+    private Double avaliacao;
     private Integer qtdAvaliacoes;
+    private String checkin;
+    private String checkout;
+    private String descricao;
+    private String tipoEstadia;
+    private String regiao;
+
 
 
     public Integer getIdHotel()
@@ -94,12 +100,12 @@ public class Hotel
         this.uf = uf;
     }
 
-    public Integer getAvaliacao()
+    public Double getAvaliacao()
     {
         return avaliacao;
     }
 
-    public void setAvaliacao(Integer avaliacao)
+    public void setAvaliacao(Double avaliacao)
     {
         this.avaliacao = avaliacao;
     }
@@ -112,5 +118,55 @@ public class Hotel
     public void setQtdAvaliacoes(Integer qtdAvaliacoes)
     {
         this.qtdAvaliacoes = qtdAvaliacoes;
+    }
+
+    public String getCheckin()
+    {
+        return checkin;
+    }
+
+    public void setCheckin(String checkin)
+    {
+        this.checkin = checkin;
+    }
+
+    public String getCheckout()
+    {
+        return checkout;
+    }
+
+    public void setCheckout(String checkout)
+    {
+        this.checkout = checkout;
+    }
+
+    public String getDescricao()
+    {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao)
+    {
+        this.descricao = descricao;
+    }
+
+    public String getTipoEstadia()
+    {
+        return tipoEstadia;
+    }
+
+    public void setTipoEstadia(String tipoEstadia)
+    {
+        this.tipoEstadia = tipoEstadia;
+    }
+
+    public String getRegiao()
+    {
+        return regiao;
+    }
+
+    public void setRegiao(String regiao)
+    {
+        this.regiao = regiao;
     }
 }

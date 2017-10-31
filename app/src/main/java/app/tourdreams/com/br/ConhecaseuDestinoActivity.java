@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -22,6 +24,7 @@ public class ConhecaseuDestinoActivity extends AppCompatActivity {
     EditText edit_text_cidade;
     List<Avaliacao> lstAvaliacoes = new ArrayList<>();
     Context context;
+    AvaliacaoAdapter avaliacaoAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,27 @@ public class ConhecaseuDestinoActivity extends AppCompatActivity {
 
         list_view_avaliacoes = (ListView) findViewById(R.id.list_view_avaliacoes);
         edit_text_cidade = (EditText) findViewById(R.id.edit_text_cidade);
+
+        edit_text_cidade.addTextChangedListener(new TextWatcher()
+        {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
+                avaliacaoAdapter.getFilter().filter(charSequence);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable)
+            {
+
+            }
+        });
         
         new PreencherListaAvaliacoesTask().execute();
     }
@@ -58,7 +82,8 @@ public class ConhecaseuDestinoActivity extends AppCompatActivity {
             super.onPostExecute(aVoid);
             Gson gson = new Gson();
             lstAvaliacoes= gson.fromJson(retorno, new TypeToken<List<Avaliacao>>(){}.getType());
-            list_view_avaliacoes.setAdapter(new AvaliacaoAdapter(context, R.layout.list_view_avaliacoes, lstAvaliacoes));
+            avaliacaoAdapter = new AvaliacaoAdapter(context, R.layout.list_view_avaliacoes, lstAvaliacoes);
+            list_view_avaliacoes.setAdapter(avaliacaoAdapter);
         }
     }
 }
