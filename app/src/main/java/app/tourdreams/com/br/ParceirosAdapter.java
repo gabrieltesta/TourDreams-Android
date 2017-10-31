@@ -14,18 +14,18 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao>
+public class ParceirosAdapter extends ArrayAdapter<Parceiro>
 {
     Context context;
     int resource;
     View view;
-    Avaliacao avaliacao;
-    ImageView img_view_cliente;
-    TextView text_view_nome, text_view_texto;
+    ImageView img_view_parceiro;
+    TextView text_view_nome;
     String mensagem;
+    Parceiro parceiro;
 
 
-    public AvaliacaoAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Avaliacao> objects)
+    public ParceirosAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Parceiro> objects)
     {
         super(context, resource, objects);
         this.resource = resource;
@@ -42,9 +42,8 @@ public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao>
             view = LayoutInflater.from(getContext()).inflate(resource, null);
         }
 
-        avaliacao = getItem(position);
+        parceiro = getItem(position);
         pegarView();
-        formatarStrings();
         inserirCamposLayout();
 
         return view;
@@ -53,27 +52,15 @@ public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao>
     //Insere os campos com os dados do banco de dados
     private void inserirCamposLayout()
     {
-        text_view_nome.setText(avaliacao.getNomeCliente());
-        text_view_texto.setText(mensagem);
-        Glide.with(view).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/td/"+avaliacao.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_view_cliente);
+        text_view_nome.setText(parceiro.getNomeParceiro());
+        Glide.with(view).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/td/"+parceiro.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_view_parceiro);
     }
 
     // Método formata as horas iniciais e finais em um só campo, e também coloca a moeda no preço.
-    private void formatarStrings()
-    {
-        mensagem = avaliacao.getMensagem();
-        if(mensagem.length() > 100)
-        {
-            mensagem = mensagem.substring(0,100);
-            mensagem += "(...)";
-        }
-    }
-
     public void pegarView()
     {
         text_view_nome = (TextView) view.findViewById(R.id.text_view_nome);
-        text_view_texto = (TextView) view.findViewById(R.id.text_view_texto);
-        img_view_cliente = (ImageView) view.findViewById(R.id.img_view_cliente);
+        img_view_parceiro = (ImageView) view.findViewById(R.id.img_view_parceiro);
     }
 
 }

@@ -52,25 +52,49 @@
             android:layout_height="wrap_content"
             android:id="@+id/edit_email"
             android:hint="contato@exemplo.com"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_group_documento">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_rg"
+                    android:checked="true"
+                    android:onClick="alterarRG"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RG"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_cpf"
+                    android:onClick="alterarCPF"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CPF"/>
+            </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RG"/>
+            android:text="RG"
+            android:id="@+id/text_view_documento"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="00.000.000-0"
-            android:id="@+id/edit_rg"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CPF"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="000.000.000-00"
-            android:id="@+id/edit_cpf"/>
+            android:id="@+id/edit_documento"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

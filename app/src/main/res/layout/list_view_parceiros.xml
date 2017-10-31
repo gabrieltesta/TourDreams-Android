@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingStart="16dp"
+              android:paddingEnd="16dp">
+    <ImageView
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:id="@+id/img_view_parceiro"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Parceiro Exemplo"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAllCaps="true"
+            android:id="@+id/text_view_nome"
+            android:gravity="center"
+            android:textSize="12pt"
+            />
+</LinearLayout>
