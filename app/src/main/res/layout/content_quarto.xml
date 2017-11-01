@@ -30,7 +30,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bairro Jardim, São Paulo - SP"/>
+            android:text="Bairro Jardim, São Paulo - SP"
+            android:id="@+id/text_view_local"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -46,6 +47,7 @@
             android:layout_marginTop="4dp"
             android:textSize="10pt"
             android:text="R$ 200,00/dia"
+            android:id="@+id/text_view_diaria"
             android:gravity="center_horizontal"
             />
         <Button

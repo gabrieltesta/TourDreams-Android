@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -38,6 +39,17 @@ public class BuscaActivity extends AppCompatActivity
         context = this;
         pegarObjetosView();
         chamarBusca();
+
+        list_view_busca.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l)
+            {
+                Intent intent = new Intent(context, HotelQuartoActivity.class);
+                intent.putExtra("idHotel", lstHotel.get(pos).getIdHotel());
+                startActivity(intent);
+            }
+        });
     }
 
     private void chamarBusca()
@@ -72,7 +84,7 @@ public class BuscaActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.107.144.24/tourdreams/";
+            String href = "http://10.0.2.2/tourdreams/";
             String link = String.format("%sbusca.php?tipo=cidade&cidade=%s", href, cidade);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);
@@ -93,7 +105,7 @@ public class BuscaActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.107.144.24/tourdreams/";
+            String href = "http://10.0.2.2/tourdreams/";
             String link = String.format("%sbusca.php?tipo=regiao&regiao=%s", href, regiao);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);

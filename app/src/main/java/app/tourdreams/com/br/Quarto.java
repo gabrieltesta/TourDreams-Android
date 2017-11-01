@@ -9,6 +9,11 @@ public class Quarto
     private Integer maxHospedes;
     private Integer qtdQuartos;
     private Integer idHotel;
+    private String caminhoImagem;
+    private String hotel;
+    private String bairro;
+    private String cidade;
+    private String uf;
 
 
     public Integer getIdQuarto()
@@ -79,5 +84,55 @@ public class Quarto
     public void setIdHotel(Integer idHotel)
     {
         this.idHotel = idHotel;
+    }
+
+    public String getCaminhoImagem()
+    {
+        return caminhoImagem;
+    }
+
+    public void setCaminhoImagem(String caminhoImagem)
+    {
+        this.caminhoImagem = caminhoImagem;
+    }
+
+    public String getHotel()
+    {
+        return hotel;
+    }
+
+    public void setHotel(String hotel)
+    {
+        this.hotel = hotel;
+    }
+
+    public String getBairro()
+    {
+        return bairro;
+    }
+
+    public void setBairro(String bairro)
+    {
+        this.bairro = bairro;
+    }
+
+    public String getCidade()
+    {
+        return cidade;
+    }
+
+    public void setCidade(String cidade)
+    {
+        this.cidade = cidade;
+    }
+
+    public String getUf()
+    {
+        return uf;
+    }
+
+    public void setUf(String uf)
+    {
+        this.uf = uf;
     }
 }

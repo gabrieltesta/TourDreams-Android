@@ -2,19 +2,37 @@
 	$login = $_GET['login'];
 	$senha = $_GET['senha'];
 	
-	mysql_connect('10.107.144.24', 'root', 'bcd127');
+	mysql_connect('localhost', 'root', 'bcd127');
 	mysql_select_db('dbtourdreams');
 	
 	$sql = "SELECT * FROM tbl_login WHERE login='".$login."' AND senha='".$senha."';";
 	
-	$select = mysql_query($sql);
-	
-	if(mysql_num_rows($select) > 0)
+	if($select = mysql_query($sql))
 	{
-		echo ('ok');
+		if($rows = mysql_fetch_array($select))
+		{
+			if($rows['idTipoLogin'] == 2)
+			{
+				echo ('parceiro');
+			}
+			else if($rows['idTipoLogin'] == 1)
+			{
+				echo ('usuario');
+			}
+			else
+			{
+				echo ('erro');
+			}
+		}
+		else
+		{
+			echo ('erro');
+		}
 	}
 	else
 	{
-		echo ('invalido');
+		echo ('erro');
 	}
+	
+	
 ?>

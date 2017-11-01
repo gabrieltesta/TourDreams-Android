@@ -147,7 +147,7 @@ public class RegistroUsuarioActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.107.144.24/tourdreams/";
+            String href = "http://10.0.2.2/tourdreams/";
             String link = String.format("%sregistroUsuario.php?login=%s&senha=%s&nome=%s&email=%s&documento=%s&numdoc=%s&celular=%s&idTipoDeLocal=%s",
                     href,
                     login,

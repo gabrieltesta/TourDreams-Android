@@ -1,5 +1,5 @@
 <?php 
-	mysql_connect('10.107.144.24', 'root', 'bcd127');
+	mysql_connect('localhost', 'root', 'bcd127');
 	mysql_select_db('dbtourdreams');
 	
 	$nome = $_GET['nome'];

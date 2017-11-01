@@ -14,19 +14,6 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-import static app.tourdreams.com.br.R.id.img_busca_hotel;
-import static app.tourdreams.com.br.R.id.img_view_cliente;
-import static app.tourdreams.com.br.R.id.img_view_estrela1;
-import static app.tourdreams.com.br.R.id.img_view_estrela2;
-import static app.tourdreams.com.br.R.id.img_view_estrela3;
-import static app.tourdreams.com.br.R.id.img_view_estrela4;
-import static app.tourdreams.com.br.R.id.img_view_estrela5;
-import static app.tourdreams.com.br.R.id.text_view_avaliacao;
-import static app.tourdreams.com.br.R.id.text_view_hotel;
-import static app.tourdreams.com.br.R.id.text_view_local;
-import static app.tourdreams.com.br.R.id.text_view_qtd_avaliacoes;
-import static app.tourdreams.com.br.R.id.text_view_valor;
-
 public class QuartoAdapter extends ArrayAdapter<Quarto>
 {
     Context context;
@@ -65,7 +52,7 @@ public class QuartoAdapter extends ArrayAdapter<Quarto>
     //Insere os campos com os dados do banco de dados
     private void inserirCamposLayout()
     {
-        Glide.with(view).load(R.drawable.quarto).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_view_quarto);
+        Glide.with(view).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+quarto.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_view_quarto);
         text_view_nome_quarto.setText(quarto.getNome());
         text_view_descricao.setText(descricao);
         text_view_preco.setText(preco);

@@ -1,12 +1,15 @@
 package app.tourdreams.com.br;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
@@ -19,9 +22,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
 {
     TextView img_norte, img_nordeste, img_centrooeste, img_sudeste, img_sul;
-    boolean loginEfetuado;
     NavigationView navigationView;
-
+    Menu menu;
     Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -43,18 +45,34 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         configurarRegioes();
 
-        if(Sessao.getStatusLogin())
+        if(Sessao.getStatusLogin() && Sessao.isUsuario())
         {
-            alterarMenuLateral();
+            alterarMenuLateralUsuario();
+        }
+
+        if(Sessao.getStatusLogin() && Sessao.isParceiro())
+        {
+            alterarMenuLateralParceiro();
         }
     }
 
-    private void alterarMenuLateral()
+    private void alterarMenuLateralUsuario()
     {
-        Menu menu = navigationView.getMenu();
+        menu = navigationView.getMenu();
         menu.findItem(R.id.nav_login).setVisible(false);
         menu.findItem(R.id.nav_registrar).setVisible(false);
+        menu.findItem(R.id.nav_perfil_parceiro).setVisible(false);
         menu.findItem(R.id.nav_perfil_usuario).setVisible(true);
+        menu.findItem(R.id.nav_logoff).setVisible(true);
+    }
+
+    private void alterarMenuLateralParceiro()
+    {
+        menu = navigationView.getMenu();
+        menu.findItem(R.id.nav_login).setVisible(false);
+        menu.findItem(R.id.nav_registrar).setVisible(false);
+        menu.findItem(R.id.nav_perfil_parceiro).setVisible(true);
+        menu.findItem(R.id.nav_perfil_usuario).setVisible(false);
         menu.findItem(R.id.nav_logoff).setVisible(true);
     }
 
@@ -213,11 +231,55 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_promocoes:
                 startActivity(new Intent(this, PromocoesActivity.class));
                 break;
+            case R.id.nav_perfil_usuario:
+                //startActivity(new Intent(this, PerfilUsuario.class));
+                break;
+            case R.id.nav_logoff:
+                deslogarUsuario();
+                break;
         }
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void deslogarUsuario()
+    {
+        new AlertDialog.Builder(context)
+                .setTitle("Logout")
+                .setMessage("Tem certeza que deseja efetuar o logout?")
+                .setPositiveButton("SIM", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i)
+                    {
+                        Handler handler = new Handler();
+                        handler.postDelayed(new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                Sessao.setStatusLogin(false);
+                                Sessao.setParceiro(false);
+                                Sessao.setUsuario(false);
+                                menu = navigationView.getMenu();
+                                menu.findItem(R.id.nav_login).setVisible(true);
+                                menu.findItem(R.id.nav_registrar).setVisible(true);
+                                menu.findItem(R.id.nav_perfil_parceiro).setVisible(false);
+                                menu.findItem(R.id.nav_perfil_usuario).setVisible(false);
+                                menu.findItem(R.id.nav_logoff).setVisible(false);
+                                new AlertDialog.Builder(context)
+                                        .setTitle("Logoff")
+                                        .setMessage("Logoff efetuado com sucesso.")
+                                        .setNeutralButton("OK", null)
+                                        .show();
+                            }
+                        }, 1000);
+                    }
+                })
+                .setNegativeButton("NÃO", null)
+                .show();
     }
 }

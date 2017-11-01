@@ -69,7 +69,7 @@ public class NossosParceirosActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.107.144.24/tourdreams/";
+            String href = "http://10.0.2.2/tourdreams/";
             String link = String.format("%sparceirosSpinner.php", href);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);

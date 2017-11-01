@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... params)
         {
-            String href = "http://10.107.144.24/tourdreams/";
+            String href = "http://10.0.2.2/tourdreams/";
             String link = String.format("%slogin.php?login=%s&senha=%s",
                     href,
                     login,
@@ -76,9 +76,18 @@ public class LoginActivity extends AppCompatActivity {
         protected void onPostExecute(Void aVoid)
         {
             super.onPostExecute(aVoid);
-            if(retorno.contains("ok"))
+            if(retorno.contains("parceiro"))
             {
                 Sessao.setStatusLogin(true);
+                Sessao.setParceiro(true);
+                Sessao.setUsuario(false);
+                startActivity(new Intent(context, MainActivity.class));
+            }
+            else if(retorno.contains("usuario"))
+            {
+                Sessao.setStatusLogin(true);
+                Sessao.setUsuario(true);
+                Sessao.setParceiro(false);
                 startActivity(new Intent(context, MainActivity.class));
             }
             else

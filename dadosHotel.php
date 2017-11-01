@@ -2,23 +2,12 @@
 	mysql_connect('localhost', 'root', 'bcd127');
 	mysql_select_db('dbtourdreams');
 	
-	if($_GET['tipo'] == 'cidade')
+	$sql = "SELECT * FROM vw_buscamobile WHERE idHotel =".$_GET['idHotel'];
+	if($select = mysql_query($sql))
 	{
-		$sql = "SELECT * FROM vw_buscamobile WHERE cidade LIKE '%".$_GET['cidade']."%'";
-	}
-	
-	if($_GET['tipo'] == 'regiao')
-	{
-		$sql = "SELECT * FROM vw_buscamobile WHERE regiao='".$_GET['regiao']."'";
-	}
-	
-	$select = mysql_query($sql);
-	
-	$array = array();
-	
-	if($rs=mysql_fetch_array($select))
-	{
-		$hotel = array(
+		if($rs = mysql_fetch_array($select))
+		{
+			$hotel = array(
 			"idHotel"=>$rs['idHotel'],
 			"hotel"=>$rs['hotel'],
 			"checkin"=>$rs['checkin'],
@@ -34,9 +23,16 @@
 			"qtdAvaliacoes"=>$rs['qtdAvaliacoes'],
 			"tipoEstadia"=>$rs['tipoEstadia'],
 			"regiao"=>$rs['regiao']
-		);
-		$array[] = $hotel;
+			);
+			echo json_encode($hotel);
+		}
+		else
+		{
+			echo ('erro');
+		}
 	}
-	
-	echo json_encode($array);
+	else
+	{
+		echo ('erro');
+	}
 ?>
