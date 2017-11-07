@@ -81,6 +81,7 @@ public class LoginActivity extends AppCompatActivity {
                 Sessao.setStatusLogin(true);
                 Sessao.setParceiro(true);
                 Sessao.setUsuario(false);
+                Sessao.setLogin(login);
                 startActivity(new Intent(context, MainActivity.class));
             }
             else if(retorno.contains("usuario"))
@@ -88,6 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                 Sessao.setStatusLogin(true);
                 Sessao.setUsuario(true);
                 Sessao.setParceiro(false);
+                Sessao.setLogin(login);
                 startActivity(new Intent(context, MainActivity.class));
             }
             else

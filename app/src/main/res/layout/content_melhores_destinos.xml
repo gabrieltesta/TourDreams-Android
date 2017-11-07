@@ -52,23 +52,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="0.80"
                 />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:backgroundTint="@color/azulClaro"
-                android:textColor="@android:color/white"
-                android:text="CONCLUIR RESERVA"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textAllCaps="true"
-                android:textSize="8pt"
-                android:onClick="reservar"/>
-
-
-
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,7 +74,6 @@
                     android:layout_gravity="center">
                 </View>
 
-
             </LinearLayout>
 
             <ImageView
@@ -108,21 +90,6 @@
                 android:textSize="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="0.80" />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:backgroundTint="@color/azulClaro"
-                android:textColor="@android:color/white"
-                android:text="CONCLUIR RESERVA"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textAllCaps="true"
-                android:textSize="8pt"
-                android:onClick="reservar"/>
-
-
-
-
         </LinearLayout>
     </LinearLayout>
 

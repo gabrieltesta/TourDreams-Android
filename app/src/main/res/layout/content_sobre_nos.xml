@@ -30,18 +30,16 @@
             <TextView
                 android:id="@+id/text_empresa"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="178dp"
                 android:layout_marginTop="20dp"
-                android:text="A empresa TourDreams é especialista no ramo de viagens, turismo e lazer, e desde sua criação busca trazer acomodações com ótimos preços em incontáveis destinos para seus clientes aproveitem suas viagens, de forma tranquila, com segurança e a confiança que nossa empresa traz.
-Está localizada na Av. Luiz Carlos Berrini, em um prédio próprio de 16 andares. Onde se localiza seus setores administrativos e possui uma ala de atendimento aos clientes in locco caso for sua preferência, além disso, atende também em stands físicos e em nosso Portal de Negócios de Viagens, tanto em seu site (http://www.portaltourdreams.com.br) ou seu aplicativo para Android.
-Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo, onde foram inclusos em nossos serviços as funcionalidades de melhores destinos, promoções e conheça seu destino."
+                android:text="A EMPRESA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA  BLA BLA BLA BLA BLA BLA BLA BLA  BLA BLA BLA BLA BLA BLA BLA BLA  BLA BLA BLA BLA BLA BLA BLA BLA  BLA BLA BLA BLA BLA BLA BLA BLA  BLA BLA BLA BLA BLA BLA BLA BLA  BLA BLA BLA BLA BLA "
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="18dp" />
+                android:textSize="20dp" />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="20dp"
                 android:src="@drawable/visao"/>
             <TextView
                 android:id="@+id/text_visao"
@@ -55,9 +53,9 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A TourDreams deseja ser a 1ª empresa brasileira em reservas de viagens até o ano de 2020, ano que completa 10 anos de existência, melhorando ainda mais seus serviços para garantir um serviço cada vez melhor para seus clientes.Deseja também aumentar seu raio de serviços para criar um portal completo de viagens, com tudo que você possa precisar ao planejar uma viagem."
+                android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  v Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  v"
                 android:layout_marginLeft="15dp"
-                android:textSize="18dp"
+                android:textSize="20dp"
                 android:textColor="#000000"
                 />
             <ImageView
@@ -77,9 +75,9 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A TourDreams possui diversos valores que todos seus funcionários seguem.Devem demonstrar e garantir honestidade, integridade aos nossos clientes, de forma clara, precisa e consistente, criando uma relação saudável e de respeito entre nossos clientes, funcionários e a empresa em si."
+                android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  v Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  v"
                 android:layout_marginLeft="15dp"
-                android:textSize="18dp"
+                android:textSize="20dp"
                 android:textColor="#000000"
                 />
             <ImageView
@@ -100,9 +98,9 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
                 android:id="@+id/text_missao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nossa empresa quando seu criador percebeu a falta de empresas fornecedoras de serviços de viagens que possuiam um tratamento próximo, pessoal e personalizado com seus clientes, e focavam apenas na reserva em si.Em 2010 foi fundada a TourDreams com esses conceitos em mente, procurando ligar os parceiros fornecedores com os clientes, garantindo um excelente atendimento de intermédio para conquistar o mercado que sente tanta falta deste serviço."
+                android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  v Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  v"
                 android:layout_marginLeft="15dp"
-                android:textSize="18dp"
+                android:textSize="20dp"
                 android:textColor="#000000"
                 />
             <LinearLayout
@@ -129,9 +127,9 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Lançamos nosso Portal de Negócios de Viagens online, em nosso site e no aplicativo Android, visando o atendimento em qualquer lugar do mundo, em qualquer hora, para qualquer cliente."
+                android:text=" aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                 android:textColor="#000000"
-                android:textSize="15dp" />
+                android:textSize="20dp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -141,7 +139,7 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2014"
+                    android:text="2016"
                     android:textColor="#666666"
                     android:textSize="25dp"
                     />
@@ -157,9 +155,9 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text=" Em 2014 a TourDreams já havia crescido imensamente desde seu primeiro ano de criação, e conquistou uma grande quantidade de clientes na região, e já pensava na expansão de seus serviços online, e criação de novos serviços para seus clientes. Além disso, criou vários setores administrativos para administração de seus processos internos."
+                android:text=" aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                 android:textColor="#000000"
-                android:textSize="15dp" />
+                android:textSize="20dp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -168,7 +166,7 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2010"
+                    android:text="2015"
                     android:textColor="#666666"
                     android:textSize="25dp"
                     />
@@ -184,9 +182,9 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text=" A TourDreams foi criada, iniciando seus serviços na Av. Luiz Carlos Berrini, e conquistando o reconhecimento e fidelidade de clientes locais, ganhando seu espaço na região e crescendo em um passo acelerado."
+                android:text=" aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                 android:textColor="#000000"
-                android:textSize="15dp" />
+                android:textSize="20dp" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

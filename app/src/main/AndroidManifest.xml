@@ -138,6 +138,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.QuartoActivity"/>
         </activity>
+        <activity
+            android:name=".PerfilUsuarioActivity"
+            android:label="@string/title_activity_perfil_usuario"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.tourdreams.com.br.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".EditarUsuarioActivity"
+            android:label="@string/title_activity_editar_usuario"
+            android:parentActivityName=".PerfilUsuarioActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.tourdreams.com.br.PerfilUsuarioActivity"/>
+        </activity>
     </application>
 
 </manifest>

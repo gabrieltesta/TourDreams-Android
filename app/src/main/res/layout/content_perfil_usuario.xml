@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="app.tourdreams.com.br.PerfilUsuarioActivity"
+    tools:showIn="@layout/activity_perfil_usuario">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/border">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="8dp"
+                android:id="@+id/img_view_usuario"
+                android:src="@drawable/pessoa"
+                android:adjustViewBounds="true"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_nome"
+                    android:text="Gabriel Augusto"
+                    android:maxLines="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_email"
+                    android:text="gabriel@email.com"
+                    android:textSize="5pt"
+                    android:maxLines="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_telefone"
+                    android:text="(22) 2222-2222"
+                    android:textSize="5pt"
+                    android:maxLines="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_tipo_local"
+                    android:text="Procura viajar para: Cidade"
+                    android:maxLines="1"
+                    android:textSize="5pt"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_tipo_reserva"
+                    android:text="Tem viajado para: Campo"
+                    android:maxLines="1"
+                    android:textSize="5pt"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_mtf"
+                    android:text="Você possui 0 pontos de fidelidade"
+                    android:maxLines="1"
+                    android:textSize="5pt"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sua última viagem:"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+
+                android:src="@drawable/hotel"
+                android:id="@+id/img_view_ultimo_hotel"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_view_ultimo_nome"
+                android:text="Hotel Exemplo"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:id="@+id/img_view_estrela1"
+                    android:src="@drawable/estrela"/>
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:id="@+id/img_view_estrela2"
+                    android:src="@drawable/estrela"/>
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:id="@+id/img_view_estrela3"
+                    android:src="@drawable/estrela"/>
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:id="@+id/img_view_estrela4"
+                    android:src="@drawable/estrela"/>
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:id="@+id/img_view_estrela5"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_view_ultimo_local"
+                android:text="Bairro exemplo, Cidade Exemplo-EX"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_view_ultimo_parceiro"
+                android:text="Insulive"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_view_ultimo_checkin"
+                android:text="Data de Check-in: 13/09/2017"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_view_ultimo_checkout"
+                android:text="Data de Check-out: 14/09/2017"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Valor: R$ 550,00"
+                android:id="@+id/text_view_ultimo_valor"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="DEIXAR UM COMENTÁRIO"
+                android:background="@color/azulEscuro"
+                android:textColor="@android:color/white"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textAllCaps="true"
+                android:textSize="9pt"/>
+        </LinearLayout>
+        -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="HISTÓRICO DE RESERVAS"
+            android:background="@color/azulEscuro"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAllCaps="true"
+            android:textSize="9pt"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:text="EDITAR PERFIL"
+            android:background="@color/azulEscuro"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAllCaps="true"
+            android:textSize="9pt"
+            android:onClick="editarConta"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:text="EXCLUIR PERFIL"
+            android:background="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAllCaps="true"
+            android:textSize="9pt"
+            android:layout_marginBottom="8dp"
+            android:onClick="excluirConta"/>
+    </LinearLayout>
+</ScrollView>

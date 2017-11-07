@@ -20,4 +20,6 @@
     <string name="title_activity_hotel_quarto">Hotel</string>
     <string name="title_activity_quarto">Quarto</string>
     <string name="title_activity_reserva">Reservar Quarto</string>
+    <string name="title_activity_perfil_usuario">Meu perfil</string>
+    <string name="title_activity_editar_usuario">Editar Usuário</string>
 </resources>
