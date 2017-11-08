@@ -231,6 +231,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_perfil_usuario:
                 startActivity(new Intent(this, PerfilUsuarioActivity.class));
                 break;
+            case R.id.nav_perfil_parceiro:
+                startActivity(new Intent(this, PerfilParceiroActivity.class));
+                break;
             case R.id.nav_logoff:
                 Sessao.deslogarUsuario(context, navigationView);
                 break;

@@ -22,7 +22,6 @@
                 android:layout_height="100dp"
                 android:padding="8dp"
                 android:id="@+id/img_view_usuario"
-                android:src="@drawable/pessoa"
                 android:adjustViewBounds="true"/>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -33,41 +32,35 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_view_nome"
-                    android:text="Gabriel Augusto"
                     android:maxLines="1"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_view_email"
-                    android:text="gabriel@email.com"
                     android:textSize="5pt"
                     android:maxLines="1"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_view_telefone"
-                    android:text="(22) 2222-2222"
                     android:textSize="5pt"
                     android:maxLines="1"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_view_tipo_local"
-                    android:text="Procura viajar para: Cidade"
                     android:maxLines="1"
                     android:textSize="5pt"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_view_tipo_reserva"
-                    android:text="Tem viajado para: Campo"
                     android:maxLines="1"
                     android:textSize="5pt"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_view_mtf"
-                    android:text="Você possui 0 pontos de fidelidade"
                     android:maxLines="1"
                     android:textSize="5pt"/>
             </LinearLayout>

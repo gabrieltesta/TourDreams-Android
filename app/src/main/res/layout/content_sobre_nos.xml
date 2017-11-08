@@ -27,21 +27,19 @@
                 android:textSize="30dp"
                 android:textAlignment="center"
                 android:layout_marginTop="20dp"/>
-            <TextView
+            <me.biubiubiu.justifytext.library.JustifyTextView
                 android:id="@+id/text_empresa"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
-                android:text="A empresa TourDreams é especialista no ramo de viagens, turismo e lazer, e desde sua criação busca trazer acomodações com ótimos preços em incontáveis destinos para seus clientes aproveitem suas viagens, de forma tranquila, com segurança e a confiança que nossa empresa traz.
-Está localizada na Av. Luiz Carlos Berrini, em um prédio próprio de 16 andares. Onde se localiza seus setores administrativos e possui uma ala de atendimento aos clientes in locco caso for sua preferência, além disso, atende também em stands físicos e em nosso Portal de Negócios de Viagens, tanto em seu site (http://www.portaltourdreams.com.br) ou seu aplicativo para Android.
-Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo, onde foram inclusos em nossos serviços as funcionalidades de melhores destinos, promoções e conheça seu destino."
+                android:text="A empresa TourDreams é especialista no ramo de viagens, turismo e lazer, e desde sua criação busca trazer acomodações com ótimos preços em incontáveis destinos para seus clientes aproveitem suas viagens, de forma tranquila, com segurança e a confiança que nossa empresa traz.\nEstá localizada na Av. Luiz Carlos Berrini, em um prédio próprio de 16 andares. Onde se localiza seus setores administrativos e possui uma ala de atendimento aos clientes in locco caso for sua preferência, além disso, atende também em stands físicos e em nosso Portal de Negócios de Viagens, tanto em seu site (http://www.portaltourdreams.com.br) ou seu aplicativo para Android.\nDesde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo, onde foram inclusos em nossos serviços as funcionalidades de melhores destinos, promoções e conheça seu destino.\n"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18dp" />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="8dp"
                 android:src="@drawable/visao"/>
             <TextView
                 android:id="@+id/text_visao"
@@ -52,7 +50,7 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
                 android:textSize="30dp"
                 android:textColor="#0e7fc6"
                 />
-            <TextView
+            <me.biubiubiu.justifytext.library.JustifyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="A TourDreams deseja ser a 1ª empresa brasileira em reservas de viagens até o ano de 2020, ano que completa 10 anos de existência, melhorando ainda mais seus serviços para garantir um serviço cada vez melhor para seus clientes.Deseja também aumentar seu raio de serviços para criar um portal completo de viagens, com tudo que você possa precisar ao planejar uma viagem."
@@ -74,7 +72,7 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
                 android:textSize="30dp"
                 android:textColor="#0e7fc6"
                 />
-            <TextView
+            <me.biubiubiu.justifytext.library.JustifyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="A TourDreams possui diversos valores que todos seus funcionários seguem.Devem demonstrar e garantir honestidade, integridade aos nossos clientes, de forma clara, precisa e consistente, criando uma relação saudável e de respeito entre nossos clientes, funcionários e a empresa em si."
@@ -96,7 +94,7 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
                 android:textSize="30dp"
                 android:textColor="#0e7fc6"
                 />
-            <TextView
+            <me.biubiubiu.justifytext.library.JustifyTextView
                 android:id="@+id/text_missao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -124,12 +122,11 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
                     android:layout_gravity="center">
                 </View>
             </LinearLayout>
-            <TextView
-
+            <me.biubiubiu.justifytext.library.JustifyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Lançamos nosso Portal de Negócios de Viagens online, em nosso site e no aplicativo Android, visando o atendimento em qualquer lugar do mundo, em qualquer hora, para qualquer cliente."
+                android:text="Lançamos nosso Portal de Negócios de Viagens online, em nosso site e no aplicativo Android, visando o atendimento em qualquer lugar do mundo, em qualquer hora, para qualquer cliente.\n"
                 android:textColor="#000000"
                 android:textSize="15dp" />
             <LinearLayout
@@ -152,12 +149,11 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
                     android:layout_gravity="center">
                 </View>
             </LinearLayout>
-            <TextView
-
+            <me.biubiubiu.justifytext.library.JustifyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text=" Em 2014 a TourDreams já havia crescido imensamente desde seu primeiro ano de criação, e conquistou uma grande quantidade de clientes na região, e já pensava na expansão de seus serviços online, e criação de novos serviços para seus clientes. Além disso, criou vários setores administrativos para administração de seus processos internos."
+                android:text=" Em 2014 a TourDreams já havia crescido imensamente desde seu primeiro ano de criação, e conquistou uma grande quantidade de clientes na região, e já pensava na expansão de seus serviços online, e criação de novos serviços para seus clientes. Além disso, criou vários setores administrativos para administração de seus processos internos.\n"
                 android:textColor="#000000"
                 android:textSize="15dp" />
             <LinearLayout
@@ -179,12 +175,11 @@ Desde dezembro de 2017 está com seu Portal de Negócios de Viagens online ativo
                     android:layout_gravity="center">
                 </View>
             </LinearLayout>
-            <TextView
-
+            <me.biubiubiu.justifytext.library.JustifyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text=" A TourDreams foi criada, iniciando seus serviços na Av. Luiz Carlos Berrini, e conquistando o reconhecimento e fidelidade de clientes locais, ganhando seu espaço na região e crescendo em um passo acelerado."
+                android:text=" A TourDreams foi criada, iniciando seus serviços na Av. Luiz Carlos Berrini, e conquistando o reconhecimento e fidelidade de clientes locais, ganhando seu espaço na região e crescendo em um passo acelerado.\n"
                 android:textColor="#000000"
                 android:textSize="15dp" />
         </LinearLayout>

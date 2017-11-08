@@ -157,6 +157,15 @@ public class PerfilUsuarioActivity extends AppCompatActivity
                         })
                         .show();
             }
+            else
+            {
+                new AlertDialog.Builder(context)
+                        .setTitle("Erro")
+                        .setMessage("Não foi possível excluir sua conta.\nTente novamente mais tarde.")
+                        .setNeutralButton("OK", null)
+                        .show();
+            }
+
         }
     }
 }

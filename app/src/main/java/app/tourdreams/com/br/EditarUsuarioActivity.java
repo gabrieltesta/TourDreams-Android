@@ -1,9 +1,11 @@
 package app.tourdreams.com.br;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -124,7 +126,7 @@ public class EditarUsuarioActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.107.144.24/tourdreams/";
+            String href = "http://10.0.2.2/tourdreams/";
             String link = String.format("%stipoLocal.php", href);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);
@@ -225,7 +227,18 @@ public class EditarUsuarioActivity extends AppCompatActivity
         protected void onPostExecute(Void aVoid)
         {
             super.onPostExecute(aVoid);
-            startActivity(new Intent(context, PerfilUsuarioActivity.class));
+            new AlertDialog.Builder(context)
+                    .setTitle("Perfil editado")
+                    .setMessage("Sua conta foi editada com sucesso!")
+                    .setNeutralButton("OK", new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i)
+                        {
+                            startActivity(new Intent(context, PerfilUsuarioActivity.class));
+                        }
+                    })
+                    .show();
         }
     }
 }
