@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Mobile.iml" filepath="$PROJECT_DIR$/Mobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Nova pasta.iml" filepath="$PROJECT_DIR$/Nova pasta.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/gitmobile.iml" filepath="$PROJECT_DIR$/gitmobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/gitmobile2.iml" filepath="$PROJECT_DIR$/gitmobile2.iml" />
