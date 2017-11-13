@@ -12,6 +12,11 @@
 		$sql = "SELECT * FROM vw_buscamobile WHERE regiao='".$_GET['regiao']."'";
 	}
 	
+	if($_GET['tipo'] == 'parceiro')
+	{
+		$sql = "SELECT * FROM vw_buscamobile WHERE idParceiro='".$_GET['idParceiro']."';";
+	}
+	
 	$select = mysql_query($sql);
 	
 	$array = array();

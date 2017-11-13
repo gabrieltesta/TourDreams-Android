@@ -15,7 +15,6 @@
 			"valorDiario"=>$rows['valorDiario'],
 			"descricao"=>$rows['descricao'],
 			"maxHospedes"=>$rows['maxHospedes'],
-			"qtdQuartos"=>$rows['qtdQuartos'],
 			"idHotel"=>$rows['idHotel'],
 			"caminhoImagem"=>$rows['caminhoImagem'],
 			"hotel"=>$rows['hotel'],

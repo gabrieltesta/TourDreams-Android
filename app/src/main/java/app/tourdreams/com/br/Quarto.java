@@ -7,7 +7,6 @@ public class Quarto
     private Double valorDiario;
     private String descricao;
     private Integer maxHospedes;
-    private Integer qtdQuartos;
     private Integer idHotel;
     private String caminhoImagem;
     private String hotel;
@@ -66,15 +65,6 @@ public class Quarto
         this.maxHospedes = maxHospedes;
     }
 
-    public Integer getQtdQuartos()
-    {
-        return qtdQuartos;
-    }
-
-    public void setQtdQuartos(Integer qtdQuartos)
-    {
-        this.qtdQuartos = qtdQuartos;
-    }
 
     public Integer getIdHotel()
     {

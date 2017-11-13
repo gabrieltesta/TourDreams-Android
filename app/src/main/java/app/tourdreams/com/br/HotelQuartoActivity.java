@@ -96,7 +96,7 @@ public class HotelQuartoActivity extends AppCompatActivity
         protected void onPostExecute(Void aVoid)
         {
             super.onPostExecute(aVoid);
-            if(retorno != null)
+            if(retorno != null && !retorno.contains("[]"))
             {
                 Gson gson = new Gson();
                 lstQuarto = gson.fromJson(retorno, new TypeToken<List<Quarto>>(){}.getType());
