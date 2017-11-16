@@ -53,7 +53,6 @@ public final class Sessao
         usuario = status;
     }
 
-
     public static String getLogin()
     {
         return login;

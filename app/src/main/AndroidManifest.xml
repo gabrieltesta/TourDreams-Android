@@ -14,7 +14,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -25,7 +26,8 @@
             android:name=".SobreNosActivity"
             android:label="@string/title_activity_sobre_nos"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
@@ -34,7 +36,8 @@
             android:name=".MelhoresDestinosActivity"
             android:label="@string/title_activity_melhores_destinos"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
@@ -43,7 +46,8 @@
             android:name=".NossosParceirosActivity"
             android:label="@string/title_activity_nossos_parceiros"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
@@ -52,7 +56,8 @@
             android:name=".ConhecaseuDestinoActivity"
             android:label="@string/title_activity_conhecaseu_destino"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
@@ -61,7 +66,8 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
@@ -70,7 +76,8 @@
             android:name=".FaleconoscoActivity"
             android:label="@string/title_activity_faleconosco"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
@@ -79,7 +86,8 @@
             android:name=".RegistroUsuarioActivity"
             android:label="@string/title_activity_registro_usuario"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
@@ -88,7 +96,8 @@
             android:name=".BuscaActivity"
             android:label="@string/title_activity_busca"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
@@ -97,7 +106,8 @@
             android:name=".ChatActivity"
             android:label="@string/title_activity_chat"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
@@ -106,7 +116,8 @@
             android:name=".PromocoesActivity"
             android:label="@string/title_activity_promocoes"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
@@ -115,7 +126,8 @@
             android:name=".HotelQuartoActivity"
             android:label="@string/title_activity_hotel_quarto"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.BuscaActivity"/>
@@ -124,7 +136,8 @@
             android:name=".QuartoActivity"
             android:label="@string/title_activity_quarto"
             android:parentActivityName=".HotelQuartoActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.HotelQuartoActivity"/>
@@ -133,7 +146,8 @@
             android:name=".ReservaActivity"
             android:label="@string/title_activity_reserva"
             android:parentActivityName=".QuartoActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.QuartoActivity"/>
@@ -142,7 +156,8 @@
             android:name=".PerfilUsuarioActivity"
             android:label="@string/title_activity_perfil_usuario"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
@@ -151,7 +166,8 @@
             android:name=".EditarUsuarioActivity"
             android:label="@string/title_activity_editar_usuario"
             android:parentActivityName=".PerfilUsuarioActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.PerfilUsuarioActivity"/>
@@ -160,10 +176,21 @@
             android:name=".PerfilParceiroActivity"
             android:label="@string/title_activity_perfil_parceiro"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.tourdreams.com.br.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".HistoricoReservasActivity"
+            android:label="@string/title_activity_historico_reservas"
+            android:parentActivityName=".PerfilUsuarioActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.tourdreams.com.br.PerfilUsuarioActivity"/>
         </activity>
     </application>
 

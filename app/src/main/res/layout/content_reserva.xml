@@ -22,26 +22,47 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Data de entrada*"/>
-            <EditText
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/edit_text_data_entrada"/>
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_text_data_entrada"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_today_black_24dp"
+                    android:id="@+id/image_view_data_inicio"/>
+            </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Data de saída*"/>
-            <EditText
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/edit_text_data_saida"/>
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_text_data_saida"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_insert_invitation_black_24dp"
+                    android:id="@+id/image_view_data_fim"/>
+            </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Quantidade de quartos*"/>
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/spn_qtd_quartos"/>
+                android:id="@+id/text_view_datas"
+                android:visibility="gone"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -82,7 +103,8 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/edit_text_validade_cartao"/>
+                android:id="@+id/edit_text_validade_cartao"
+                android:hint="08/2022"/>
         </LinearLayout>
 
     </ScrollView>
@@ -101,22 +123,20 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="R$ 200,00"
                 android:textSize="10pt"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:id="@+id/text_view_valorfinal"/>
             <Button
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
-                android:textColor="@color/azulClaro"
                 android:text="RESERVAR"
                 android:textSize="8pt"
                 android:fontFamily="sans-serif-smallcaps"
-                android:backgroundTint="@android:color/white"/>
+                android:id="@+id/btn_reservar"/>
         </LinearLayout>
-
     </LinearLayout>
 
 </LinearLayout>

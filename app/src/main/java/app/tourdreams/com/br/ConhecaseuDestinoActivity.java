@@ -50,7 +50,7 @@ public class ConhecaseuDestinoActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
             {
-                avaliacaoAdapter.getFilter().filter(charSequence);
+                avaliacaoAdapter.filter(charSequence.toString());
             }
 
             @Override

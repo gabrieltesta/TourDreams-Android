@@ -74,6 +74,11 @@ public class PerfilUsuarioActivity extends AppCompatActivity
         startActivity(new Intent(context, EditarUsuarioActivity.class));
     }
 
+    public void abrirHistorico(View view)
+    {
+        startActivity(new Intent(context, HistoricoReservasActivity.class));
+    }
+
     private class PegarDadosUsuarioTask extends AsyncTask<Void, Void, Void>
     {
         String retorno;
@@ -108,7 +113,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity
             text_view_tipo_local.setText(String.format("Prefere viajar para: %s", usuario.getTipoLocal()));
             text_view_tipo_reserva.setText(String.format("Tem viajado para: %s", "Campo"));
             text_view_mtf.setText(String.format("Você possui %d pontos no Milhas Travel", usuario.getMilhasPontuacao()));
-            Glide.with(context).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/td/"+ usuario.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_usuario);
+            Glide.with(context).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+ usuario.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_usuario);
         }
     }
 

@@ -34,9 +34,9 @@ public class NossosParceirosActivity extends AppCompatActivity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         context = this;
 
-        spn_nossosparceiros = (Spinner) findViewById(R.id.spn_nossosparceiros);
+        //spn_nossosparceiros = (Spinner) findViewById(R.id.spn_nossosparceiros);
         list_view_parceiros = (ListView) findViewById(R.id.list_view_parceiros);
-        new PreencherSpinnerTask().execute();
+        //new PreencherSpinnerTask().execute();
         new PreencherListaDestaqueTask().execute();
     }
 

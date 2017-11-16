@@ -7,15 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
-public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao> implements Filterable
+public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao>
 {
     Context context;
     int resource;
@@ -24,7 +25,8 @@ public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao> implements Filtera
     ImageView img_view_cliente;
     TextView text_view_nome, text_view_texto;
     String mensagem;
-
+    private List<Avaliacao> avaliacaolist = null;
+    private ArrayList<Avaliacao> arraylist;
 
 
     public AvaliacaoAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Avaliacao> objects)
@@ -32,6 +34,19 @@ public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao> implements Filtera
         super(context, resource, objects);
         this.resource = resource;
         this.context = context;
+        avaliacaolist = objects;
+        arraylist = new ArrayList<Avaliacao>();
+        arraylist.addAll(objects);
+    }
+
+    @Override
+    public int getCount() {
+        return avaliacaolist.size();
+    }
+
+    @Override
+    public Avaliacao getItem(int position) {
+        return avaliacaolist.get(position);
     }
 
     @NonNull
@@ -57,7 +72,7 @@ public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao> implements Filtera
     {
         text_view_nome.setText(avaliacao.getNomeCliente());
         text_view_texto.setText(mensagem);
-        Glide.with(view).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/td/"+avaliacao.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_view_cliente);
+        Glide.with(view).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+avaliacao.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_view_cliente);
     }
 
     // Método formata as horas iniciais e finais em um só campo, e também coloca a moeda no preço.
@@ -78,6 +93,24 @@ public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao> implements Filtera
         img_view_cliente = (ImageView) view.findViewById(R.id.img_view_cliente);
     }
 
+    public void filter(String charText) {
+        charText = charText.toLowerCase(Locale.getDefault());
+        avaliacaolist.clear();
+        if (charText.length() == 0) {
+            avaliacaolist.addAll(arraylist);
+        }
+        else
+        {
+            for (Avaliacao a : arraylist)
+            {
+                if (a.getCidade().toLowerCase(Locale.getDefault()).contains(charText))
+                {
+                    avaliacaolist.add(a);
+                }
+            }
+        }
+        notifyDataSetChanged();
+    }
 
 
 }

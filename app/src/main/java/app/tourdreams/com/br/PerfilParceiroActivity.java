@@ -87,7 +87,7 @@ public class PerfilParceiroActivity extends AppCompatActivity
             text_view_email.setText(parceiro.getEmailParceiro());
             text_view_cnpj.setText(parceiro.getCnpj());
 
-            Glide.with(context).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/td/"+ parceiro.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_parceiro);
+            Glide.with(context).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+ parceiro.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_parceiro);
             new PreencherListaHotelTask().execute();
         }
     }

@@ -1,19 +1,25 @@
 package app.tourdreams.com.br;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import ss.com.bannerslider.banners.Banner;
-import ss.com.bannerslider.banners.DrawableBanner;
+import ss.com.bannerslider.banners.RemoteBanner;
 import ss.com.bannerslider.views.BannerSlider;
 
 public class PromocoesActivity extends AppCompatActivity
 {
-
+    List<Promocao> lstPromocao = new ArrayList<>();
+    BannerSlider bannerSlider;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -23,18 +29,37 @@ public class PromocoesActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        bannerSlider = (BannerSlider) findViewById(R.id.banner_slider);
+        new PegarPromocoesTask().execute();
 
-        BannerSlider bannerSlider = (BannerSlider) findViewById(R.id.banner_slider);
-        List<Banner> banners = new ArrayList<>();
-
-        banners.add(new DrawableBanner(R.drawable.bglogin));
-        banners.add(new DrawableBanner(R.drawable.bgmenuregistro));
-        banners.add(new DrawableBanner(R.drawable.bglogin));
-        banners.add(new DrawableBanner(R.drawable.bgmenuregistro));
-        banners.add(new DrawableBanner(R.drawable.bglogin));
-        banners.add(new DrawableBanner(R.drawable.bgmenuregistro));
-
-        bannerSlider.setBanners(banners);
     }
 
+    private class PegarPromocoesTask extends AsyncTask<Void, Void, Void>
+    {
+        String retorno;
+        @Override
+        protected Void doInBackground(Void... voids)
+        {
+            String href = "http://10.0.2.2/tourdreams/";
+            String link = String.format("%spromocoes.php", href);
+            retorno = HttpConnection.get(link);
+            Log.d("retorno", retorno);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid)
+        {
+            super.onPostExecute(aVoid);
+            Gson gson = new Gson();
+            lstPromocao = gson.fromJson(retorno, new TypeToken<List<Promocao>>(){}.getType());
+            List<Banner> banners = new ArrayList<>();
+            for (int i = 0; i < lstPromocao.size(); i++)
+            {
+                banners.add(new RemoteBanner("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+lstPromocao.get(i).getCaminhoImagem()));
+            }
+
+            bannerSlider.setBanners(banners);
+        }
+    }
 }

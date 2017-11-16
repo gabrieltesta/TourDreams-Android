@@ -65,98 +65,6 @@
                     android:textSize="5pt"/>
             </LinearLayout>
         </LinearLayout>
-        <!--
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="16dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Sua última viagem:"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-
-                android:src="@drawable/hotel"
-                android:id="@+id/img_view_ultimo_hotel"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/text_view_ultimo_nome"
-                android:text="Hotel Exemplo"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:id="@+id/img_view_estrela1"
-                    android:src="@drawable/estrela"/>
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:id="@+id/img_view_estrela2"
-                    android:src="@drawable/estrela"/>
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:id="@+id/img_view_estrela3"
-                    android:src="@drawable/estrela"/>
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:id="@+id/img_view_estrela4"
-                    android:src="@drawable/estrela"/>
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:id="@+id/img_view_estrela5"/>
-            </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/text_view_ultimo_local"
-                android:text="Bairro exemplo, Cidade Exemplo-EX"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/text_view_ultimo_parceiro"
-                android:text="Insulive"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/text_view_ultimo_checkin"
-                android:text="Data de Check-in: 13/09/2017"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/text_view_ultimo_checkout"
-                android:text="Data de Check-out: 14/09/2017"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Valor: R$ 550,00"
-                android:id="@+id/text_view_ultimo_valor"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:text="DEIXAR UM COMENTÁRIO"
-                android:background="@color/azulEscuro"
-                android:textColor="@android:color/white"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textAllCaps="true"
-                android:textSize="9pt"/>
-        </LinearLayout>
-        -->
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -167,7 +75,8 @@
             android:textColor="@android:color/white"
             android:fontFamily="sans-serif-smallcaps"
             android:textAllCaps="true"
-            android:textSize="9pt"/>
+            android:textSize="9pt"
+            android:onClick="abrirHistorico"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

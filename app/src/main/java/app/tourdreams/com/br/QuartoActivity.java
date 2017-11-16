@@ -1,9 +1,11 @@
 package app.tourdreams.com.br;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -21,6 +23,7 @@ public class QuartoActivity extends AppCompatActivity
     Integer idQuarto;
     TextView text_view_hotel, text_view_quarto, text_view_local, text_view_diaria;
     ImageView img_view_quarto;
+    Quarto quarto;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -36,10 +39,33 @@ public class QuartoActivity extends AppCompatActivity
 
         pegarObjetosView();
 
+        if(!Sessao.getStatusLogin())
+        {
+            new AlertDialog.Builder(context).setTitle("Você precisa efetuar o login!")
+                    .setMessage("É necessário o login para efetuar uma reserva.\nDeseja efetuar o login agora?")
+                    .setNegativeButton("NÃO", new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i)
+                        {
+                            startActivity(new Intent(context, MainActivity.class));
+                        }
+                    })
+                    .setPositiveButton("SIM", new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i)
+                        {
+                            startActivity(new Intent(context, LoginActivity.class));
+                        }
+                    }).show();
+        }
+
         if(idQuarto != 0)
         {
             new PreencherDadosQuartoTask().execute();
         }
+
     }
 
     private void pegarObjetosView()
@@ -53,7 +79,10 @@ public class QuartoActivity extends AppCompatActivity
 
     public void abrirReserva(View view)
     {
-        startActivity(new Intent(this, ReservaActivity.class));
+        Intent intent = new Intent(context, ReservaActivity.class);
+        intent.putExtra("idQuarto", idQuarto);
+        intent.putExtra("valorDiario", quarto.getValorDiario());
+        startActivity(intent);
     }
 
     private class PreencherDadosQuartoTask extends AsyncTask<Void, Void, Void>
@@ -76,7 +105,7 @@ public class QuartoActivity extends AppCompatActivity
             if(retorno != null)
             {
                 Gson gson = new Gson();
-                Quarto quarto = gson.fromJson(retorno, Quarto.class);
+                quarto = gson.fromJson(retorno, Quarto.class);
                 text_view_hotel.setText(quarto.getHotel());
                 text_view_quarto.setText(quarto.getNome());
                 text_view_local.setText(String.format("%s, %s - %s", quarto.getBairro(), quarto.getCidade(), quarto.getUf()));
