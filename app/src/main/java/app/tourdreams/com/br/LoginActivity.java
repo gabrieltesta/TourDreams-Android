@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... params)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%slogin.php?login=%s&senha=%s",
                     href,
                     login,

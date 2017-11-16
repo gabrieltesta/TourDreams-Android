@@ -46,7 +46,7 @@ public class NossosParceirosActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sparceirosDestaque.php", href);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);
@@ -69,7 +69,7 @@ public class NossosParceirosActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sparceirosSpinner.php", href);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);

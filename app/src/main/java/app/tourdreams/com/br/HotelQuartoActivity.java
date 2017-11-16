@@ -85,7 +85,7 @@ public class HotelQuartoActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%squartosHotel.php?idHotel=%d", href, idHotel);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);
@@ -111,7 +111,7 @@ public class HotelQuartoActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sdadosHotel.php?idHotel=%d", href, idHotel);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);
@@ -165,7 +165,7 @@ public class HotelQuartoActivity extends AppCompatActivity
                 img_view_estrela5.setImageResource(R.drawable.estrela);
                 break;
         }
-        Glide.with(context).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+ hotel.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_hotel);
+        Glide.with(context).load("http://www.portaltourdreams.com.br/"+ hotel.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_hotel);
         text_view_checkin.setText(String.format("Check-in: %s", hotel.getCheckin()));
         text_view_checkout.setText(String.format("Check-out: %s", hotel.getCheckout()));
     }

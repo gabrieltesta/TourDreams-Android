@@ -126,7 +126,7 @@ public class EditarUsuarioActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%stipoLocal.php", href);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);
@@ -156,7 +156,7 @@ public class EditarUsuarioActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sdadosUsuario.php?login=%s",
                     href, Sessao.getLogin()
             );
@@ -190,7 +190,7 @@ public class EditarUsuarioActivity extends AppCompatActivity
                 radio_rg.setChecked(false);
                 edit_documento.setText(usuario.getCpf());
             }
-            Glide.with(context).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/td/"+ usuario.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_cliente);
+            Glide.with(context).load("http://www.portaltourdreams.com.br/"+ usuario.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_cliente);
         }
     }
 
@@ -207,7 +207,7 @@ public class EditarUsuarioActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%seditarUsuario.php?idCliente=%s&nome=%s&email=%s&documento=%s&numdoc=%s&celular=%s&tipolocal=%s",
                     href,
                     usuario.getIdCliente(),

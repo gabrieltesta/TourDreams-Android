@@ -57,7 +57,7 @@ public class TransacaoAdapter extends ArrayAdapter<Transacao>
     //Insere os campos com os dados do banco de dados
     private void inserirCamposLayout()
     {
-        Glide.with(view).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+ transacao.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(image_view_hotel);
+        Glide.with(view).load("http://www.portaltourdreams.com.br/"+ transacao.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(image_view_hotel);
         text_view_hotel.setText(transacao.getHotel());
         text_view_periodo.setText(periodo);
         text_view_transacao.setText(dtTransacao);

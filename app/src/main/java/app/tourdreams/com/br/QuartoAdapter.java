@@ -52,7 +52,7 @@ public class QuartoAdapter extends ArrayAdapter<Quarto>
     //Insere os campos com os dados do banco de dados
     private void inserirCamposLayout()
     {
-        Glide.with(view).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+quarto.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_view_quarto);
+        Glide.with(view).load("http://www.portaltourdreams.com.br/"+quarto.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_view_quarto);
         text_view_nome_quarto.setText(quarto.getNome());
         text_view_descricao.setText(descricao);
         text_view_preco.setText(preco);

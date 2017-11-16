@@ -91,8 +91,8 @@ public class QuartoActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
-            String link = String.format("%sdadosquarto.php?idQuarto=%d", href, idQuarto);
+            String href = "http://www.portaltourdreams.com.br/mobile/";
+            String link = String.format("%sdadosQuarto.php?idQuarto=%d", href, idQuarto);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);
             return null;
@@ -109,7 +109,7 @@ public class QuartoActivity extends AppCompatActivity
                 text_view_hotel.setText(quarto.getHotel());
                 text_view_quarto.setText(quarto.getNome());
                 text_view_local.setText(String.format("%s, %s - %s", quarto.getBairro(), quarto.getCidade(), quarto.getUf()));
-                Glide.with(context).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+ quarto.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_quarto);
+                Glide.with(context).load("http://www.portaltourdreams.com.br/"+ quarto.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_quarto);
                 text_view_diaria.setText(String.format("R$%.2f/dia", quarto.getValorDiario()));
             }
 

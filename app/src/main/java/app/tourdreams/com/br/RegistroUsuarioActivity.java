@@ -147,7 +147,7 @@ public class RegistroUsuarioActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sregistroUsuario.php?login=%s&senha=%s&nome=%s&email=%s&documento=%s&numdoc=%s&celular=%s&idTipoDeLocal=%s",
                     href,
                     login,
@@ -199,7 +199,7 @@ public class RegistroUsuarioActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%stipoLocal.php", href);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);

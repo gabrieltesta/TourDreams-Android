@@ -360,7 +360,7 @@ public class ReservaActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sreservar.php?idQuarto=%d&dataEntrada=%s&dataSaida=%s&nometitular=%s&numerocartao=%s&codigoseguranca=%s&validade=%s&valorTotal=%f&qtdDias=%d&login=%s",
                     href, idQuarto, dataEntrada, dataSaida, nomeTitular, numeroCartao, codigoSeguranca, validadeCartao, valorTotal, qtdDias, Sessao.getLogin());
             retorno = HttpConnection.get(link);
@@ -414,7 +414,7 @@ public class ReservaActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%schecarDataReserva.php?idQuarto=%d&dataEntrada=%s&dataSaida=%s", href, idQuarto, dataEntrada, dataSaida);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);

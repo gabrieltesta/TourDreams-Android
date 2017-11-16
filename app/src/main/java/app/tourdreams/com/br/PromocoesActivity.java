@@ -40,7 +40,7 @@ public class PromocoesActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%spromocoes.php", href);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);
@@ -56,7 +56,7 @@ public class PromocoesActivity extends AppCompatActivity
             List<Banner> banners = new ArrayList<>();
             for (int i = 0; i < lstPromocao.size(); i++)
             {
-                banners.add(new RemoteBanner("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+lstPromocao.get(i).getCaminhoImagem()));
+                banners.add(new RemoteBanner("http://www.portaltourdreams.com.br/"+lstPromocao.get(i).getCaminhoImagem()));
             }
 
             bannerSlider.setBanners(banners);

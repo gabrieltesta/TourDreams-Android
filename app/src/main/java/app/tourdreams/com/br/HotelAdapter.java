@@ -58,7 +58,7 @@ public class HotelAdapter extends ArrayAdapter<Hotel>
         text_view_valor.setText(valorMinimo);
         text_view_qtd_avaliacoes.setText(qtdAvaliacoes);
         text_view_avaliacao.setText(String.format("%.0f", hotel.getAvaliacao()));
-        Glide.with(view).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+ hotel.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_busca_hotel);
+        Glide.with(view).load("http://www.portaltourdreams.com.br/"+ hotel.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_busca_hotel);
 
         switch (hotel.getQtdEstrelas())
         {

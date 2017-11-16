@@ -84,7 +84,7 @@ public class BuscaActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sbusca.php?tipo=cidade&cidade=%s", href, cidade);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);
@@ -105,7 +105,7 @@ public class BuscaActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sbusca.php?tipo=regiao&regiao=%s", href, regiao);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);

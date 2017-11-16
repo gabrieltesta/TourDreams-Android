@@ -64,7 +64,7 @@ public class FaleconoscoActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sinformacoes.php", href);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);
@@ -91,7 +91,7 @@ public class FaleconoscoActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%senviarFeedback.php?nome=%s&email=%s&telefone=%s&mensagem=%s",
                     href,
                     nome,

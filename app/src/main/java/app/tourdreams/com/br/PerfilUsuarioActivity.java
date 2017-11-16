@@ -92,7 +92,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sdadosUsuario.php?login=%s",
                     href, Sessao.getLogin()
                     );
@@ -113,7 +113,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity
             text_view_tipo_local.setText(String.format("Prefere viajar para: %s", usuario.getTipoLocal()));
             text_view_tipo_reserva.setText(String.format("Tem viajado para: %s", "Campo"));
             text_view_mtf.setText(String.format("Você possui %d pontos no Milhas Travel", usuario.getMilhasPontuacao()));
-            Glide.with(context).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+ usuario.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_usuario);
+            Glide.with(context).load("http://www.portaltourdreams.com.br/"+ usuario.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_usuario);
         }
     }
 
@@ -130,7 +130,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sexcluirUsuario.php?login=%s",
                     href, Sessao.getLogin()
             );

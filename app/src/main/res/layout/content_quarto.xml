@@ -18,26 +18,22 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hotel"
             android:id="@+id/text_view_hotel"
             android:textSize="10pt"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Quarto Simples"
             android:textSize="8pt"
             android:id="@+id/text_view_quarto"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bairro Jardim, São Paulo - SP"
             android:id="@+id/text_view_local"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:maxHeight="300dp"
-            android:src="@drawable/quarto"
             android:id="@+id/img_view_quarto"
             />
         <TextView
@@ -46,7 +42,6 @@
             android:textColor="@android:color/holo_green_light"
             android:layout_marginTop="4dp"
             android:textSize="10pt"
-            android:text="R$ 200,00/dia"
             android:id="@+id/text_view_diaria"
             android:gravity="center_horizontal"
             />

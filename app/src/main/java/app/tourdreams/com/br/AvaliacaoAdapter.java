@@ -72,7 +72,7 @@ public class AvaliacaoAdapter extends ArrayAdapter<Avaliacao>
     {
         text_view_nome.setText(avaliacao.getNomeCliente());
         text_view_texto.setText(mensagem);
-        Glide.with(view).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+avaliacao.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_view_cliente);
+        Glide.with(view).load("http://www.portaltourdreams.com.br/"+avaliacao.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_view_cliente);
     }
 
     // Método formata as horas iniciais e finais em um só campo, e também coloca a moeda no preço.

@@ -46,7 +46,7 @@ public class HistoricoReservasActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%shistoricoReserva.php?login=%s", href, Sessao.getLogin());
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);

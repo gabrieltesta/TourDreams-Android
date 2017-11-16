@@ -53,7 +53,7 @@ public class ParceirosAdapter extends ArrayAdapter<Parceiro>
     private void inserirCamposLayout()
     {
         text_view_nome.setText(parceiro.getNomeParceiro());
-        Glide.with(view).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+parceiro.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_view_parceiro);
+        Glide.with(view).load("http://www.portaltourdreams.com.br/"+parceiro.getCaminhoImagem()).thumbnail(Glide.with(view).load(R.drawable.loading)).into(img_view_parceiro);
     }
 
     // Método formata as horas iniciais e finais em um só campo, e também coloca a moeda no preço.

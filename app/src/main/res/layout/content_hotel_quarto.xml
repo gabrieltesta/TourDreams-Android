@@ -32,7 +32,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_view_hotel"
-                    android:text="Hotel"
                     android:textSize="8pt"/>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -67,12 +66,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_view_local"
-                    android:text="Bairro Jardim, São Paulo - SP"
                     android:layout_weight="1"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="80 - 123 avaliações"
                     android:id="@+id/text_view_avaliacao"/>
             </LinearLayout>
             <ImageView
@@ -80,7 +77,6 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/hotel"
                 android:layout_marginTop="4dp"
                 android:maxHeight="300dp"
                 android:id="@+id/img_view_hotel"/>
@@ -102,7 +98,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Check-in: 14:00"
                         android:layout_gravity="center"
                         android:id="@+id/text_view_checkin"/>
                 </LinearLayout>
@@ -118,7 +113,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Check-out: 12:00"
                         android:layout_gravity="center"
                         android:id="@+id/text_view_checkout"/>
                 </LinearLayout>

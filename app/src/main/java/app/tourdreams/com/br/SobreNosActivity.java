@@ -56,7 +56,7 @@ public class SobreNosActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sdadosSobreNos.php", href);
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);
@@ -71,11 +71,11 @@ public class SobreNosActivity extends AppCompatActivity {
             {
                 String array[] = retorno.split(";");
                 text_view_descricaosuperior.setText(array[0]+"\n");
-                Glide.with(context).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+array[1]).into(image_view_visao);
+                Glide.with(context).load("http://www.portaltourdreams.com.br/"+array[1]).into(image_view_visao);
                 text_view_visao.setText(array[2]+"\n");
-                Glide.with(context).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+array[3]).into(image_view_valores);
+                Glide.with(context).load("http://www.portaltourdreams.com.br/"+array[3]).into(image_view_valores);
                 text_view_valores.setText(array[4]+"\n");
-                Glide.with(context).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+array[5]).into(image_view_missao);
+                Glide.with(context).load("http://www.portaltourdreams.com.br/"+array[5]).into(image_view_missao);
                 text_view_missao.setText(array[6]+"\n");
                 text_view_anoum.setText(array[7]);
                 text_view_descricaoum.setText(array[8]+"\n");

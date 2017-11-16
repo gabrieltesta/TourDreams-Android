@@ -68,7 +68,7 @@ public class PerfilParceiroActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sdadosParceiro.php?login=%s",
                     href, Sessao.getLogin()
             );
@@ -87,7 +87,7 @@ public class PerfilParceiroActivity extends AppCompatActivity
             text_view_email.setText(parceiro.getEmailParceiro());
             text_view_cnpj.setText(parceiro.getCnpj());
 
-            Glide.with(context).load("http://10.0.2.2/inf4t/Gabriel%20Augusto/"+ parceiro.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_parceiro);
+            Glide.with(context).load("http://www.portaltourdreams.com.br/"+ parceiro.getCaminhoImagem()).thumbnail(Glide.with(context).load(R.drawable.loading)).into(img_view_parceiro);
             new PreencherListaHotelTask().execute();
         }
     }
@@ -98,7 +98,7 @@ public class PerfilParceiroActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... voids)
         {
-            String href = "http://10.0.2.2/tourdreams/";
+            String href = "http://www.portaltourdreams.com.br/mobile/";
             String link = String.format("%sbusca.php?tipo=parceiro&idParceiro=%d", href, parceiro.getIdParceiro());
             retorno = HttpConnection.get(link);
             Log.d("retorno", retorno);

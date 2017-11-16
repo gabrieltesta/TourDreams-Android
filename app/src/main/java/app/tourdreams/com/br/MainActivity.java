@@ -208,9 +208,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_sobrenos:
                 startActivity(new Intent(this, SobreNosActivity.class));
                 break;
-            case R.id.nav_melhoresdestinos:
+            /*case R.id.nav_melhoresdestinos:
                 startActivity(new Intent(this, MelhoresDestinosActivity.class));
-                break;
+                break;*/
             case R.id.nav_nossosparceiros:
                 startActivity(new Intent(this, NossosParceirosActivity.class));
                 break;

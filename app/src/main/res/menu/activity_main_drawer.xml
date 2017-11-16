@@ -15,10 +15,10 @@
             android:id="@+id/nav_nossosparceiros"
             android:icon="@drawable/ic_group_black_24dp"
             android:title="Nossos Parceiros"/>
-        <item
+        <!--<item
             android:id="@+id/nav_melhoresdestinos"
             android:icon="@drawable/ic_place_black_24dp"
-            android:title="Melhores Destinos"/>
+            android:title="Melhores Destinos"/>-->
         <item
             android:id="@+id/nav_conhecaseudestino"
             android:icon="@drawable/ic_rate_review_black_24dp"
@@ -55,7 +55,7 @@
             />
         <item
             android:id="@+id/nav_logoff"
-            android:icon="@android:drawable/ic_lock_power_off"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
             android:title="Sair"
             android:visible="false"/>
     </group>
